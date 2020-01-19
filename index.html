@@ -89,7 +89,7 @@
                         //ERRORS HERE
                 var center = new THREE.Vector3();
                 var size = new THREE.Vector3();
-                //boundingBox.getCenter(center);
+                boundingBox.getCenter(center);
                 boundingBox.getSize(size);
             
                 // get the max side of the bounding box (fits to width OR height as needed )
@@ -123,7 +123,7 @@
                 if ( controls ) {
             
                 // set camera to rotate around center of loaded object
-                //controls.target = center;
+                controls.target = center;
             
                 // prevent camera from zooming out far enough to create far plane cutoff
                 controls.maxDistance = cameraToFarEdge * 1.5;
@@ -135,6 +135,7 @@
                     camera.lookAt( center )
             
                 }
+                camera.lookAt( center )
             }
             
             
