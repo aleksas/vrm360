@@ -147,7 +147,7 @@
             function init() {
 
                 camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.01, 1e10 );
-                camera.position.z = 4;
+                camera.position.z = 6;
 
                 controls = new THREE.OrbitControls( camera );
 
@@ -167,7 +167,7 @@
                 //loader.load( 'assets/kicad-test.wrl', function ( object ) {
                 //loader.load( 'assets/oshwi.wrl', function ( object ) {
                     scene.add( object );
-                    fitCameraToObject ( camera, object, 1.35, controls );
+                    fitCameraToObject ( camera, object, 1.15, controls );
 
                 } );
 
