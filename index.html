@@ -163,9 +163,8 @@
                 camera.add( dirLight.target );
 
                 var loader = new THREE.VRMLLoader();
-                // loader.load( 'assets/house.wrl', function ( object ) {
-                
-                loader.load( 'assets/kicad-test.wrl', function ( object ) {
+                loader.load( 'assets/DIY_detector.wrl', function ( object ) {
+                //loader.load( 'assets/kicad-test.wrl', function ( object ) {
                 //loader.load( 'assets/oshwi.wrl', function ( object ) {
                     scene.add( object );
                     fitCameraToObject ( camera, object, 1.35, controls );
