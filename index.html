@@ -87,8 +87,8 @@
                 boundingBox.setFromObject( object );
                     
                         //ERRORS HERE
-                const center = boundingBox.getCenter();
-                const size = boundingBox.getSize();
+                const center = boundingBox.getCenter(object);
+                const size = boundingBox.getSize(object);
             
                 // get the max side of the bounding box (fits to width OR height as needed )
                 const maxDim = Math.max( size.x, size.y, size.z );
