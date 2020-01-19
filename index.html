@@ -87,8 +87,10 @@
                 boundingBox.setFromObject( object );
                     
                         //ERRORS HERE
-                const center = boundingBox.getCenter(object);
-                const size = boundingBox.getSize(object);
+                var center new THREE.Vector3();
+                var size = new THREE.Vector3();
+                boundingBox.getCenter(center);
+                boundingBox.getSize(size);
             
                 // get the max side of the bounding box (fits to width OR height as needed )
                 const maxDim = Math.max( size.x, size.y, size.z );
