@@ -124,7 +124,7 @@
                 controls.target = center;
             
                 // prevent camera from zooming out far enough to create far plane cutoff
-                controls.maxDistance = cameraToFarEdge * 2;
+                controls.maxDistance = cameraToFarEdge * 1.5;
                         // ERROR HERE   
                 controls.saveState();
             
@@ -167,8 +167,8 @@
                 //loader.load( 'assets/kicad-test.wrl', function ( object ) {
                 //loader.load( 'assets/oshwi.wrl', function ( object ) {
                     scene.add( object );
-                    fitCameraToObject ( camera, object, 1.15, controls );
-
+                    fitCameraToObject ( camera, object, 1.05, controls );
+                    renderer.render( scene, camera );
                 } );
 
                 // renderer
