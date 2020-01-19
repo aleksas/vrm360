@@ -168,7 +168,6 @@
                 //loader.load( 'assets/oshwi.wrl', function ( object ) {
                     scene.add( object );
                     fitCameraToObject ( camera, object, 1.05, controls );
-                    renderer.render( scene, camera );
                 } );
 
                 // renderer
@@ -185,6 +184,9 @@
                 // container.appendChild( stats.dom );
 
                 //
+                camera.updateProjectionMatrix();
+                renderer.render( scene, camera );
+
 
                 window.addEventListener( 'resize', onWindowResize, false );
                 
