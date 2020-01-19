@@ -103,10 +103,10 @@
                 //Method 1 to get object's world position
                 scene.updateMatrixWorld(); //Update world positions
                 var objectWorldPosition = new THREE.Vector3();
-                objectWorldPosition.setFromMatrixPosition( object.matrixWorld );
+                //objectWorldPosition.setFromMatrixPosition( object.matrixWorld );
                 
                 //Method 2 to get object's world position
-                //objectWorldPosition = object.getWorldPosition();
+                objectWorldPosition = object.getWorldPosition();
             
                 const directionVector = camera.position.sub(objectWorldPosition);   //Get vector from camera to object
                 const unitDirectionVector = directionVector.normalize(); // Convert to unit vector
